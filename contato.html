@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contato - Ale Dorama</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <div class="topo">
+      <img src="C:\xampp\htdocs\blog Dorama\imagens\logo do blog.png" alt="Logo do blog" class="logo" />
+      <span class="frase-chegada">Bem-vindo ao Ale Dorama!</span>
+    </div>
+  </header>
+
+  <nav>
+    <a href="index.html">início</a>
+    <a href="Resenhas.html">Resenhas</a>
+    <a href="rankings.html">rankings</a>
+    <a href="curiosidades.html">curiosidades</a>
+    <a href="contato.html" class="ativo">contato</a>
+  </nav>
+
+  <main class="contato-container">
+    <section class="formulario-contato">
+      <h2>📩 Entre em Contato</h2>
+      <p>Quer sugerir um dorama para eu resenhar? Tem alguma dúvida ou feedback? Mande sua mensagem!</p>
+
+        <form id="form-contato" class="formulario-contato" action="#" method="post">
+      <div class="form-group">
+          <label for="nome">Seu nome (opcional):</label>
+          <input type="text" id="nome" name="nome" />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Seu e-mail (opcional):</label>
+          <input type="email" id="email" name="email" />
+        </div>
+
+        <div class="form-group">
+          <label for="mensagem">Sua mensagem (obrigatório):</label>
+          <textarea id="mensagem" name="mensagem" required></textarea>
+        </div>
+
+        <button type="submit" class="botao-enviar">Enviar mensagem</button>
+      </form>
+    </section>
+
+    <section class="info-contato">
+      <h2>💌 Outras formas de contato:</h2>
+      <div class="contato-detalhes">
+        <p><strong>E-mail:</strong> alessandrapereiradesousa185@gmail.com</p>
+        <p><strong>Instagram:</strong> @ale.s0usa</p>
+      </div>
+
+      <div class="dicas-contato">
+        <h3>Dicas para seu contato:</h3>
+        <ul>
+          <li>Para sugestões de doramas, mencione o nome completo</li>
+          <li>Se for sobre uma resenha, indique qual você quer que eu analise</li>
+          <li>Respondo todas as mensagens em até 48h!</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container-rodape">
+      <p class="texto-rodape">
+        © 2025 Ale Dorama - Desenvolvido com 💜 para dorameiros de plantão!
+      </p>
+      <div class="redes-sociais">
+        <a href="#"><img src="imagens/instagram.png" alt="Instagram" /></a>
+        <a href="#"><img src="imagens/twitter.png" alt="Twitter" /></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('form-contato').addEventListener('submit', function(event) {
+      const mensagemInput = document.getElementById('mensagem');
+      if (!mensagemInput.value.trim()) {
+        alert('Por favor, escreva sua mensagem antes de enviar!');
+        event.preventDefault();
+      } else {
+        alert('Mensagem enviada com sucesso! Obrigada por entrar em contato 💜');
+      }
+    });
+  </script>
+</body>
+</html>
